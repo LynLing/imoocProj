@@ -39,35 +39,37 @@ public class CircusUI {
         if(operation >= 6 || operation < 0){
             System.out.println("**  输入信息不正确，请重新输入  **");
         }
+        IACT actor = null;
         switch(operation){
             case 1: {
-                Bear bear = new Bear("Bill", 1);
-                bear.act();
+                actor = new Bear("Bill", 1);
+
                 break;
             }
             case 2: {
-                Lion lion = new Lion("Lain", 2, "灰色", "公狮");
-                lion.act();
+                actor = new Lion("Lain", 2, "灰色", "公狮");
+
                 break;
             }
             case 3: {
-                Monkey monkey = new Monkey("Tom", 1, "金丝猴");
-                monkey.act();
+                actor = new Monkey("Tom", 1, "金丝猴");
+
                 break;
             }
             case 4:{
-                Parrot parrot = new Parrot("Rose", 1, "牡丹鹦鹉");
-                parrot.act();
+                actor = new Parrot("Rose", 1, "牡丹鹦鹉");
+
                 break;
             }
             case 5:{
-                Clown clown = new Clown("Kahle", 5);
-                clown.act();
+                actor = new Clown("Kahle", 5);
+
                 break;
             }
             default:{
                 System.out.println("");
             }
         }
+        actor.act();
     }
 }
